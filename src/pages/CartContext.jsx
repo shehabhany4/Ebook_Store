@@ -35,6 +35,9 @@ export function CartProvider({ children }) {
       prevItems.filter((item) => item.id !== productId)
     );
   };
+    const clearCart = () => {
+    setCartItems([]);
+  };
 
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
