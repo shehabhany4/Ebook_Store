@@ -12,11 +12,7 @@ function Cart() {
   );
 
   const handleProceedToPayment = () => {
-    if (cartItems.length > 0) {
       navigate("/payment"); 
-    } else {
-      toast.error("Your cart is empty.");
-    }
   };
 
   return (
