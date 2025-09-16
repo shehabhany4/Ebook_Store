@@ -119,7 +119,7 @@ function PaymentPage() {
                       id="name"
                       value={cardInfo.name}
                       onChange={handleInputChange}
-                      placeholder="John M. Doe"
+                      placeholder="ِAbdulrahman Gamal"
                       required
                     />
                   </div>
