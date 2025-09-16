@@ -36,11 +36,6 @@ export function CartProvider({ children }) {
     );
   };
 
-  const clearCart = () => {
-    toast.success("Cart cleared");
-    setCartItems([]);
-  };
-
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -48,7 +43,7 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart, totalPrice }}
+      value={{ cartItems, addToCart, removeFromCart, totalPrice }}
     >
       {children}
     </CartContext.Provider>
