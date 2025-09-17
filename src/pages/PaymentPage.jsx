@@ -115,7 +115,11 @@ function PaymentPage() {
                       id="name"
                       value={cardInfo.name}
                       onChange={handleInputChange}
+<<<<<<< HEAD
                       placeholder="Abdelrhman"
+=======
+                      placeholder="ِAbdulrahman Gamal"
+>>>>>>> 4a27981ede4e935377ad63568e380901b04ba700
                       required
                     />
                   </div>

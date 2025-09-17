@@ -42,9 +42,13 @@ export function CartProvider({ children }) {
       prevItems.filter((item) => item.id !== productId)
     );
   };
+<<<<<<< HEAD
 
   const clearCart = () => {
     toast.success("Cart cleared 🗑️");
+=======
+    const clearCart = () => {
+>>>>>>> 4a27981ede4e935377ad63568e380901b04ba700
     setCartItems([]);
   };
 
@@ -55,7 +59,7 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart, totalPrice }}
+      value={{ cartItems, addToCart, removeFromCart, totalPrice }}
     >
       {children}
     </CartContext.Provider>
