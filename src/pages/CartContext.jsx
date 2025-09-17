@@ -14,10 +14,7 @@ export function CartProvider({ children }) {
   }, [cartItems]);
 
   const addToCart = (product) => {
-    let priceAsNumber =
-      typeof product.price === "string"
-        ? parseFloat(product.price.replace("$", "")) 
-        : product.price;
+    let priceNumber = product.price;
 
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
@@ -31,7 +28,7 @@ export function CartProvider({ children }) {
         );
       } else {
         toast.success("Added To Cart ✅");
-        return [...prevItems, { ...product, price: priceAsNumber, quantity: 1 }];
+        return [...prevItems, { ...product, price: priceNumber, quantity: 1 }];
       }
     });
   };
