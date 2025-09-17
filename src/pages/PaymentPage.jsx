@@ -1,6 +1,4 @@
-// src/pages/PaymentPage.jsx
-
-import React, { useState } from "react";
+import { useState } from "react";
 import { useCart } from "./CartContext";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";

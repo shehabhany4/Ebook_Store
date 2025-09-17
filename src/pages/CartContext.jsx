@@ -41,7 +41,6 @@ export function CartProvider({ children }) {
   };
 
   const clearCart = () => {
-    toast.success("Cart cleared 🗑️");
     setCartItems([]);
   };
 
