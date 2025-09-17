@@ -44,21 +44,6 @@ function PaymentPage() {
     }, 2000); 
   };
 
-  if (cartItems.length === 0) {
-    return (
-      <div
-        className="container text-center"
-        style={{ paddingTop: "100px", minHeight: "70vh" }}
-      >
-        <h2>Your cart is empty.</h2>
-        <p>There's nothing to pay for. Let's go shopping!</p>
-        <button onClick={() => navigate("/home")} className="btn btn-primary">
-          Back to Home
-        </button>
-      </div>
-    );
-  }
-
   return (
     <div
       className="container"
