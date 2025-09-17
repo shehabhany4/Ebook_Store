@@ -9,7 +9,6 @@ function PaymentPage() {
   const { cartItems, clearCart } = useCart();
   const navigate = useNavigate();
 
-  // State for form inputs
   const [cardInfo, setCardInfo] = useState({
     name: "",
     cardNumber: "",
@@ -17,8 +16,7 @@ function PaymentPage() {
     cvv: "",
   });
 
-  // Calculate total price
-  const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+  const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -26,9 +24,8 @@ function PaymentPage() {
   };
 
   const handlePaymentSubmit = (e) => {
-    e.preventDefault(); // Prevent form from reloading the page
+    e.preventDefault(); 
 
-    // Basic validation
     if (
       !cardInfo.name ||
       !cardInfo.cardNumber ||
@@ -39,15 +36,14 @@ function PaymentPage() {
       return;
     }
 
-    // Simulate payment processing
     toast.loading("Processing payment...");
 
     setTimeout(() => {
       toast.dismiss();
       toast.success("Payment successful! Thank you for your purchase.");
-      clearCart(); // Clear the cart after successful payment
-      navigate("/home"); // Redirect to home page
-    }, 2000); // 2-second delay to simulate processing
+      clearCart(); 
+      navigate("/home"); 
+    }, 2000); 
   };
 
   if (cartItems.length === 0) {
@@ -119,7 +115,7 @@ function PaymentPage() {
                       id="name"
                       value={cardInfo.name}
                       onChange={handleInputChange}
-                      placeholder="John M. Doe"
+                      placeholder="Abdelrhman"
                       required
                     />
                   </div>
@@ -133,7 +129,7 @@ function PaymentPage() {
                       id="cardNumber"
                       value={cardInfo.cardNumber}
                       onChange={handleInputChange}
-                      placeholder="XXXX XXXX XXXX XXXX"
+                      placeholder="XXXX XXXX XXXX"
                       required
                     />
                   </div>
@@ -147,7 +143,7 @@ function PaymentPage() {
                       id="expiry"
                       value={cardInfo.expiry}
                       onChange={handleInputChange}
-                      placeholder="MM/YY"
+                      placeholder="DD/MM/YY"
                       required
                     />
                   </div>

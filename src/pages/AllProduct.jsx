@@ -10,112 +10,112 @@ export default function AllProduct() {
       id: 8,
       title: "Dead of Winter",
       author: "Darcy Coates",
-      price: "$40.00",
+      price: 40,
       img: "src/images/Group 34250.svg",
     },
     {
       id: 9,
       title: "Fortune Favors the Healed",
       author: "Madeline Eve Pregulman",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34231.svg",
     },
     {
       id: 10,
       title: "The Power of Crystals",
       author: "Juliet Madison",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34234.svg",
     },
     {
       id: 11,
       title: "Bombmaker",
       author: "Daniel Davies",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34235.svg",
     },
     {
       id: 12,
       title: "Dead of Winter",
       author: "Darcy Coates",
-      price: "$40.00",
+      price: 40,
       img: "src/images/Group 34250.svg",
     },
     {
       id: 13,
       title: "Fortune Favors the Healed",
       author: "Madeline Eve Pregulman",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34231.svg",
     },
     {
       id: 14,
       title: "The Power of Crystals",
       author: "Juliet Madison",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34234.svg",
     },
     {
       id: 15,
       title: "Bombmaker",
       author: "Daniel Davies",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34235.svg",
     },
     {
       id: 16,
       title: "Dead of Winter",
       author: "Darcy Coates",
-      price: "$40.00",
+      price: 40,
       img: "src/images/Group 34250.svg",
     },
     {
       id: 17,
       title: "Fortune Favors the Healed",
       author: "Madeline Eve Pregulman",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34231.svg",
     },
     {
       id: 18,
       title: "The Power of Crystals",
       author: "Juliet Madison",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34234.svg",
     },
     {
       id: 19,
       title: "Bombmaker",
       author: "Daniel Davies",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34235.svg",
     },
     {
       id: 20,
       title: "Dead of Winter",
       author: "Darcy Coates",
-      price: "$40.00",
+      price: 40,
       img: "src/images/Group 34250.svg",
     },
     {
       id: 21,
       title: "Fortune Favors the Healed",
       author: "Madeline Eve Pregulman",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34231.svg",
     },
     {
       id: 22,
       title: "The Power of Crystals",
       author: "Juliet Madison",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34234.svg",
     },
     {
       id: 23,
       title: "Bombmaker",
       author: "Daniel Davies",
-      price: "$25.00",
+      price: 25,
       img: "src/images/Group 34235.svg",
     }
   ];
@@ -153,7 +153,7 @@ export default function AllProduct() {
                   <div className="card-body text-center">
                     <h6 className="card-title mb-1">{book.title}</h6>
                     <p className="text-muted small mb-1">{book.author}</p>
-                    <p className="fw-bold mb-2">{book.price}</p>
+                    <p className="fw-bold mb-2">${book.price.toFixed(2)}</p>
                     <button
                       className="btn btn-outline-dark btn-sm"
                       onClick={() => addToCart(book)}

@@ -53,7 +53,7 @@ export default function Navbar() {
                   🛒
                   {totalQuantity > 0 && (
                     <span
-                      className="badge  rounded-pill position-absolute top-1 start-50 translate-middle"
+                      className="badge position-absolute top-1 start-50 translate-middle"
                       style={{ fontSize: "0.7rem" }}
                     >
                       {totalQuantity}

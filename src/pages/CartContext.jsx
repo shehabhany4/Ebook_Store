@@ -1,10 +1,17 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import toast from "react-hot-toast";
 
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem("cartItems");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (product) => {
     let priceAsNumber =
@@ -23,21 +30,21 @@ export function CartProvider({ children }) {
             : item
         );
       } else {
-        toast.success("Added To Cart ");
+        toast.success("Added To Cart ✅");
         return [...prevItems, { ...product, price: priceAsNumber, quantity: 1 }];
       }
     });
   };
 
   const removeFromCart = (productId) => {
-    toast.success("Item removed from cart");
+    toast.success("Item removed ❌");
     setCartItems((prevItems) =>
       prevItems.filter((item) => item.id !== productId)
     );
   };
 
   const clearCart = () => {
-    toast.success("Cart cleared");
+    toast.success("Cart cleared 🗑️");
     setCartItems([]);
   };
 

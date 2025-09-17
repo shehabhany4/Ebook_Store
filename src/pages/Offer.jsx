@@ -12,7 +12,7 @@ export default function Offer() {
       author: "Joseph Murphy",
       desc: "The Power of Your Subconscious Mind is one of the most promising self improvement books that ",
       img: "/src/images/power of mind 1.svg",
-      price: 40.0,
+      price: 40,
       oldPrice: "$60.00",
     },
     {
@@ -21,7 +21,7 @@ export default function Offer() {
       author: "Cal Newport",
       desc: "Deep work is the ability to focus without distraction on a cognitively demanding task.",
       img: "/src/images/power of mind 2.svg",
-      price: 30.0, 
+      price: 30, 
       oldPrice: "$45.00",
     },
     {
@@ -30,7 +30,7 @@ export default function Offer() {
       author: "David Goggins",
       desc: "For David Goggins, childhood was a nightmare—poverty, prejudice, and physical abuse colored his days and haunted his nights.",
       img: "/src/images/power of mind 3.svg",
-      price: 60.0, 
+      price: 60, 
       oldPrice: "$75.00",
     },
   ];
